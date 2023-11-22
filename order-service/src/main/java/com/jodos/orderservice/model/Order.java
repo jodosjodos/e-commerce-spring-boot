@@ -1,7 +1,7 @@
 package com.jodos.orderservice.model;
 
 import com.jodos.orderservice.dto.OrderLineItems;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
