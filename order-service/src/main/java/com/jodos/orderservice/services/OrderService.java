@@ -22,7 +22,7 @@ import java.util.UUID;
 @Transactional
 public class OrderService {
     private final OrderRepository repository;
-    private final WebClient webClient;
+    private final WebClient.Builder webClientBuilder;
 
     public void placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
@@ -36,15 +36,15 @@ public class OrderService {
 
 
 //         check my stock if products ordered are present
-        InventoryResponse[] inventoryResponseArray= webClient.get()
-                .uri("http://localhost:8082/api/inventory",
+        InventoryResponse[] inventoryResponseArray = webClientBuilder.build().get()
+                .uri("http://inventory-service/api/inventory",
                         uriBuilder ->
-                                uriBuilder.queryParam("sku-code",skuCodes).build())
+                                uriBuilder.queryParam("sku-code", skuCodes).build())
                 .retrieve()
                 .bodyToMono(InventoryResponse[].class)
                 .block();
         assert inventoryResponseArray != null;
-        boolean allProductsInStock= Arrays.stream(inventoryResponseArray).allMatch(InventoryResponse::isInStock);
+        boolean allProductsInStock = Arrays.stream(inventoryResponseArray).allMatch(InventoryResponse::isInStock);
         if (allProductsInStock) {
             repository.save(order);
 
