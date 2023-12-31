@@ -15,6 +15,7 @@
         <module name="inventory-service" />
         <module name="discovery-serverr" />
         <module name="api-gatewayyy" />
+        <module name="notification-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +34,7 @@
       <module name="e-commerce" options="" />
       <module name="inventory-service" options="-parameters" />
       <module name="microservice-new" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
     </option>
