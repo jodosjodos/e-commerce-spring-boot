@@ -54,6 +54,8 @@ public class OrderService {
             boolean allProductsInStock = Arrays.stream(inventoryResponseArray).allMatch(InventoryResponse::isInStock);
             if (allProductsInStock) {
                 repository.save(order);
+
+                // add message to topic
                 kafkaTemplate.send("notificationTopic", new OrderPlacedEvent(order.getOrderNumber()));
                 return " order placed successfully";
             } else {
@@ -64,6 +66,8 @@ public class OrderService {
         }
     }
 
+
+    // return ordered items
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemDto) {
         OrderLineItems orderLineItems = new OrderLineItems();
         orderLineItems.setPrice(orderLineItemDto.getPrice());
