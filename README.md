@@ -1,4 +1,4 @@
- Simple E-Commerce with Spring Boot Microservices
+# Simple E-Commerce with Spring Boot Microservices
 
 ## Overview
 
@@ -35,4 +35,3 @@ This project implements a simple e-commerce application using Spring Boot and a 
     git clone https://github.com/jodosjodos/e-commerce-spring-boot.git
     ```
 
-**Note:** Feel free to customize and expand this template based on your project's specific details. Include sections that best highlight the key aspects of your e-commerce application and make it easy for others to understand, use, and contribute.
