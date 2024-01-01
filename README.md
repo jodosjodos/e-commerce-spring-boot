@@ -35,3 +35,6 @@ This project implements a simple e-commerce application using Spring Boot and a 
     git clone https://github.com/jodosjodos/e-commerce-spring-boot.git
     ```
 
+
+    
+feel free to leave feedback 
