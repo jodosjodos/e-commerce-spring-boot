@@ -37,4 +37,5 @@ This project implements a simple e-commerce application using Spring Boot and a 
 
 
     
-feel free to leave feedback 
+feel free to leave feedback .  
+**self made by jodos**
