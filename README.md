@@ -30,10 +30,16 @@ This project implements a simple e-commerce application using Spring Boot and a 
 ### Installation
 
 1. Clone the repository:
-
-    ```bash
+  ```bash
     git clone https://github.com/jodosjodos/e-commerce-spring-boot.git
-    ```
+  ```
+2. run all your services
+3. check that your eureka have registered all your services  here 
+```bash
+ http://localhost:8761/
+```
+
+  
 
 
     
